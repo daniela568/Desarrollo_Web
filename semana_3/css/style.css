@@ -1,0 +1,48 @@
+/* Fondo y tipografía */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* fondo muy claro */
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezados */
+h1 {
+  color: #222; /* gris oscuro */
+}
+
+h2 {
+  color: #444; /* gris medio */
+}
+
+/* Secciones */
+section {
+  background-color: #fff;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #ccc; /* borde simple */
+}
+
+/* Botones */
+.btn {
+  margin: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #555; /* gris simple */
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Media query */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.4em;
+  }
+  section {
+    margin: 8px;
+    padding: 8px;
+  }
+}
