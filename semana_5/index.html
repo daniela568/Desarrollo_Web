@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferretería El Tornillo Feliz</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Mi CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="bg-secondary text-white text-center p-3">
+    <h1>Ferretería El Tornillo Feliz</h1>
+  </header>
+
+  <!-- Menú -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#quienes-somos">Quiénes Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#registro">Registro</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Inicio -->
+  <section id="inicio" class="text-center p-4 bg-white">
+    <h2>Inicio</h2>
+    <p>Bienvenido a nuestra ferretería, donde encontrarás herramientas y materiales básicos.</p>
+    <a href="#catalogo" class="btn btn-outline-dark">Ver Catálogo</a>
+    <a href="#contacto" class="btn btn-outline-secondary">Contáctanos</a>
+  </section>
+
+  <!-- Quiénes Somos -->
+  <section id="quienes-somos" class="container my-4">
+    <h2>Quiénes Somos</h2>
+    <p>Somos una ferretería local que apoya a la comunidad con productos de calidad y precios accesibles.</p>
+    <img src="ferreteria.jpg" alt="Imagen de la ferretería" class="img-fluid border">
+  </section>
+
+  <!-- Catálogo interactivo -->
+   <section id="catalogo" class="container my-4">
+    <h2>Catálogo Interactivo</h2>
+    <div class="mb-3">
+        <label for="filtro" class="form-label">Filtrar por categoría:</label>
+        <select id="filtro" class="form-select">
+            <option value="todos">Todos</option>
+            <option value="herramientas">Herramientas</option>
+            <option value="fijaciones">Fijaciones</option>
+            <option value="materiales">Materiales</option>
+        </select>
+    </div>
+
+  <!-- Aquí se insertarán los productos dinámicamente -->
+  <div class="row" id="lista-productos"></div>
+</section>
+
+
+  <!-- Registro de productos -->
+  <section id="registro" class="container my-4">
+    <h2>Registrar Producto</h2>
+    <form id="form-producto">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripción</label>
+        <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="categoria" class="form-label">Categoría</label>
+        <select class="form-select" id="categoria" required>
+          <option value="">Seleccione una categoría</option>
+          <option value="herramientas">Herramientas</option>
+          <option value="fijaciones">Fijaciones</option>
+          <option value="materiales">Materiales</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Agregar</button>
+    </form>
+    <p id="total" class="mt-3"></p>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="container my-4">
+    <h2>Contacto</h2>
+    <form>
+      <div class="mb-3">
+        <label for="nombre-contacto" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre-contacto">
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo">
+      </div>
+      <div class="mb-3">
+        <label for="asunto" class="form-label">Asunto</label>
+        <input type="text" class="form-control" id="asunto">
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-secondary text-white text-center p-2">
+    <p>© 2026 Ferretería El Tornillo Feliz</p>
+  </footer>
+
+  <!-- Script Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script externo -->
+  <script src="js/script.js"></script>
+</body>
+</html>
